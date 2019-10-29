@@ -5,8 +5,11 @@ import model.*;
 import model.ufo.UFO;
 import view.MyWindow;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
 public class Main {
 
@@ -63,7 +66,7 @@ public class Main {
         var ufo = new UFO(x,y);
         ufo.attachListener(new UFOObserverAddNew());
         gameData.enemyObject.add(ufo);
-    }
+}
 
     private static void gameLoop() {
         running = true;

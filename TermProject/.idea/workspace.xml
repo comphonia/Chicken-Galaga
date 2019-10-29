@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce0114bd-2758-44f7-ae37-794a9438527a" name="Default Changelist" comment="" />
+    <list default="true" id="ce0114bd-2758-44f7-ae37-794a9438527a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/brock1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/brock2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/brock3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/bullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/chick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/chicken.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/cursor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/lbBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/pugun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/puhealth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/pushield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/shield3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/ship1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/ship2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/srock1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/star_gold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/graphics/startBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/Helpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TermProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TermProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MyCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MyWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyWindow.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,20 +43,33 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1R3yMMY6rdf2ppVo9Z6T4k4DABN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="view" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\Ex5EveristusA\src" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="view" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\out\production\TermProject" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -85,10 +125,30 @@
       <workItem from="1572150536026" duration="676000" />
       <workItem from="1572151233678" duration="857000" />
       <workItem from="1572153072064" duration="57000" />
+      <workItem from="1572154372487" duration="3847000" />
+      <workItem from="1572290076262" duration="3698000" />
+      <workItem from="1572294194182" duration="178000" />
+      <workItem from="1572294395432" duration="11109000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

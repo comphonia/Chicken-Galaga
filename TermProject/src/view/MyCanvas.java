@@ -1,9 +1,13 @@
 package view;
 
+import controller.Helpers;
 import controller.Main;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
 public class MyCanvas extends JPanel {
 
@@ -52,11 +56,20 @@ public class MyCanvas extends JPanel {
         gOnScreen = this.getGraphics();
         if (gOnScreen != null) {
             // copy offScreen image to onScreen
-            gOnScreen.drawImage(doubleBufferImage, 0, 0, null);
+           // gOnScreen.drawImage(doubleBufferImage, 0, 0, null);
         }
         Toolkit.getDefaultToolkit().sync(); // sync the display on some systems
         if (gOnScreen != null) {
             gOnScreen.dispose();
         }
     }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        // read bg image
+        BufferedImage img = Helpers.ImageLoader.LoadImage("./assets/graphics/bg.png");
+        super.paintComponent(g);
+        g.drawImage(img, 0, 0, this); // see javadoc for more info on the parameters
+    }
+
 }
