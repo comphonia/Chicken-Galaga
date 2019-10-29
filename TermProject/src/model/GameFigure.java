@@ -22,7 +22,7 @@ public abstract class GameFigure {
         location.y = y;
     }
 
-    public boolean colllideWith(GameFigure o){
+    public boolean collideWith(GameFigure o){
         double dist = this.location.distance(o.location);
         if (dist <= this.getCollisionRadius()+o.getCollisionRadius()){
             return true;

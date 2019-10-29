@@ -2,30 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0114bd-2758-44f7-ae37-794a9438527a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/brock1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/brock2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/brock3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/bullet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/chick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/chicken.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/cursor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/lbBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/pugun.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/puhealth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/pushield.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/shield3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/ship1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/ship2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/srock1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/star_gold.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/graphics/startBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/Helpers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Leaderboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TermProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TermProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameFigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/missle/Missile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/missle/Missile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ufo/UFO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MyCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MyWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyWindow.java" afterDir="false" />
     </list>
@@ -129,6 +113,7 @@
       <workItem from="1572290076262" duration="3698000" />
       <workItem from="1572294194182" duration="178000" />
       <workItem from="1572294395432" duration="11109000" />
+      <workItem from="1572324905357" duration="13651000" />
     </task>
     <servers />
   </component>

@@ -24,10 +24,10 @@ public class Missile extends GameFigure {
     MissileAnimStrategy animStrategy;
 
     public Missile(int tx, int ty) {
-        Shooter shooter = (Shooter) Main.gameData.fixedObject.get(Main.INDEX_SHOOTER);
+        Shooter shooter = (Shooter) Main.gameData.fixedObject.get(0);
         super.location.x = shooter.barrel.x2;
         super.location.y = shooter.barrel.y2;
-        target = new Point2D.Float(tx, ty);
+        target = new Point2D.Float(shooter.base.x, -90);
         color = Color.RED;
         state =STATE_SHOOTING;
         animStrategy = new MissileAnimShooting(this);
@@ -36,7 +36,7 @@ public class Missile extends GameFigure {
     @Override
     public void render(Graphics2D g2) {
         g2.setColor(color);
-        g2.setStroke(new BasicStroke(1)); // thickness of the line
+        g2.setStroke(new BasicStroke(5)); // thickness of the line
         g2.fillOval((int) super.location.x - size / 2, (int) super.location.y - size / 2, size, size);
     }
 

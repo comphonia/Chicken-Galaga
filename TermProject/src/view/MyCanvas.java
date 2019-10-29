@@ -33,7 +33,7 @@ public class MyCanvas extends JPanel {
         }
 
         // initialize the image buffer
-        g2Offscreen.setBackground((Color.BLACK));
+        g2Offscreen.setBackground((Color.black));
         g2Offscreen.clearRect(0, 0, width, height);
 
         // render all game data here
@@ -56,7 +56,8 @@ public class MyCanvas extends JPanel {
         gOnScreen = this.getGraphics();
         if (gOnScreen != null) {
             // copy offScreen image to onScreen
-           // gOnScreen.drawImage(doubleBufferImage, 0, 0, null);
+            if(Main.running)
+            gOnScreen.drawImage(doubleBufferImage, 0, 0, null);
         }
         Toolkit.getDefaultToolkit().sync(); // sync the display on some systems
         if (gOnScreen != null) {

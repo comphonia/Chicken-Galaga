@@ -30,7 +30,7 @@ public class UFO extends GameFigure implements Subject {
         width = size;
         height = size /2;
         state=STATE_FLYING;
-        color = Color.BLUE;
+        color = Color.white;
         animStrategy = new UFOAnimFlying(this);
     }
     @Override

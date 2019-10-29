@@ -18,32 +18,33 @@ public class PlayerInputEventQueue {
             InputEvent inputEvent = queue.removeFirst();
 
             switch (inputEvent.type) {
-                case InputEvent.MOUSE_PRESSED:
-                    MouseEvent e = (MouseEvent) inputEvent.event;
-                    Missile m = new Missile(e.getX(), e.getY());
-                    Main.gameData.friendObject.add(m);
-                    break;
-                case InputEvent.MOUSE_MOVED:
-                    MousePointer mp = (MousePointer) Main.gameData.fixedObject.get(0);
-                    MouseEvent me = (MouseEvent) inputEvent.event;
-                    mp.location.x = me.getX();
-                    mp.location.y = me.getY();
-                    break;
                 case InputEvent.KEY_PRESSED:
-                    var shooter = Main.gameData.fixedObject.get(Main.INDEX_SHOOTER);
+                    var shooter = Main.gameData.fixedObject.get(0);
                     KeyEvent ke = (KeyEvent) inputEvent.event;
+                if( ke.getKeyCode() == KeyEvent.VK_SPACE) {
+                    Missile m = new Missile(0, 0);
+                    Main.gameData.friendObject.add(m);
+                }
                     switch (ke.getKeyCode()) {
                         case KeyEvent.VK_UP:
-                            shooter.location.y -= Shooter.UNIT_MOVE;
+                            if(shooter.location.y > 0 + Shooter.BASE_SIZE - 2) {
+                                shooter.location.y -= Shooter.UNIT_MOVE;
+                            }
                             break;
                         case KeyEvent.VK_DOWN:
-                            shooter.location.y += Shooter.UNIT_MOVE;
+                            if(shooter.location.y < Main.win.canvas.height - Shooter.BASE_SIZE) {
+                                shooter.location.y += Shooter.UNIT_MOVE;
+                            }
                             break;
                         case KeyEvent.VK_LEFT:
-                            shooter.location.x -= Shooter.UNIT_MOVE;
+                            if(shooter.location.x > 0 + Shooter.BASE_SIZE/2){
+                                   shooter.location.x -= Shooter.UNIT_MOVE;
+                            }
                             break;
                         case KeyEvent.VK_RIGHT:
-                            shooter.location.x += Shooter.UNIT_MOVE;
+                            if(shooter.location.x < Main.win.canvas.width - Shooter.BASE_SIZE) {
+                                shooter.location.x += Shooter.UNIT_MOVE;
+                            }
                             break;
                     }
                     break;

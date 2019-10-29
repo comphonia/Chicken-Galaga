@@ -3,13 +3,11 @@ package controller;
 import controller.observer.UFOObserverAddNew;
 import model.*;
 import model.ufo.UFO;
+import view.Leaderboard;
 import view.MyWindow;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
 
 public class Main {
 
@@ -21,13 +19,10 @@ public class Main {
     public static int INDEX_MOUSE_POINTER = 0; // in gameData.fixedObject
     public static int INDEX_SHOOTER = 1;
 
-    public static int FPS = 20; // frames per second
+    public static int FPS = 30; // frames per second
 
     public static void main(String[] args) {
-        win = new MyWindow();
-        win.init();
-        win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        win.setVisible(true);
+        openStartScreen();
 
         gameData = new GameData();
         playerInputEventQueue = new PlayerInputEventQueue();
@@ -39,8 +34,8 @@ public class Main {
 
     static void startScreen(){
         //show initial message on canvas
-        Font font = new Font("Courier New",Font.BOLD,40);
-        gameData.friendObject.add(new Text("Press Start Button",100,200, Color.YELLOW,font));
+       // Font font = new Font("Courier New",Font.BOLD,40);
+      //  gameData.friendObject.add(new Text("Press Start Button",100,200, Color.YELLOW,font));
         while(!running){
             Main.win.canvas.render();
             try {
@@ -54,7 +49,7 @@ public class Main {
 
     static void initGame(){
         gameData.clear();
-        gameData.fixedObject.add(new MousePointer(0,0));
+      //  gameData.fixedObject.add(new MousePointer(0,0));
         int x = Main.win.getWidth() / 2;
         int y = Main.win.getHeight() - 100;
         gameData.fixedObject.add(new Shooter(x,y));
@@ -91,20 +86,30 @@ public class Main {
     }
 
     private static void processCollisions() {
-        var shooter = (Shooter)Main.gameData.fixedObject.get(Main.INDEX_SHOOTER);
+        var shooter = (Shooter)Main.gameData.fixedObject.get(0);
         for(var enemy: Main.gameData.enemyObject){
-            if(shooter.colllideWith(enemy)){
+            if(shooter.collideWith(enemy)){
                 ++shooter.hitCount;
                 ++enemy.hitCount;
             }
         }
         for(var friend: Main.gameData.friendObject){
             for(var enemy: Main.gameData.enemyObject){
-                if(friend.colllideWith(enemy)){
+                if(friend.collideWith(enemy)){
                     ++friend.hitCount;
                     ++enemy.hitCount;
                 }
             }
         }
     }
+
+    private static void openStartScreen(){
+        win = new MyWindow();
+        win.init();
+        win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        win.setVisible(true);
+    }
+
 }
+
+

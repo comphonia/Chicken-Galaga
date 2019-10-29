@@ -14,6 +14,7 @@ public class MyWindow extends JFrame {
 
     public MyCanvas canvas;
     public JButton startButton;
+    public static Leaderboard leaderboard;
     public JButton leaderboardButton;
     public JButton quitButton;
 
@@ -80,12 +81,24 @@ public class MyWindow extends JFrame {
         startButton.addActionListener(e -> {
             if (!Main.running) {
                 Main.running = true;
+                canvas.remove(fixedPanel);
+                canvas.remove(logo);
             }
         });
         quitButton.addActionListener(e -> {
             System.exit(0);
         });
+        leaderboardButton.addActionListener(e -> {
+            openLeaderboard();
+        });
 
+    }
+
+    private static void openLeaderboard(){
+        leaderboard = new Leaderboard();
+        leaderboard.init();
+        leaderboard.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        leaderboard.setVisible(true);
     }
 
 }
