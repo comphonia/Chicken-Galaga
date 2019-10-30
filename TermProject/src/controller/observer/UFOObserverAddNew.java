@@ -6,7 +6,7 @@ import controller.Main;
 public class UFOObserverAddNew implements Observer{
     @Override
     public void eventReceived() {
-        System.out.println("UFO died");
+      //  System.out.println("UFO died");
         //Main.addUFOwithListener(100,200);
         InputEvent event = new InputEvent();
         event.event = new UFOCreateEvent("UFO",100,100);

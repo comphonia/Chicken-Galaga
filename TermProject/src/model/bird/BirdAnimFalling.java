@@ -1,12 +1,13 @@
-package model.ufo;
+package model.bird;
 
 import java.awt.*;
 
-public class UFOAnimFalling implements UFOAnimStrategy {
-    UFO context;
+public class BirdAnimFalling implements BirdAnimStrategy {
+    Bird context;
 
-    public UFOAnimFalling(UFO context){
+    public BirdAnimFalling(Bird context){
         this.context = context;
+        context.AVAILABLE_UNITS--;
     }
     @Override
     public void animate() {

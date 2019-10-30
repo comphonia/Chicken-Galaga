@@ -2,7 +2,7 @@ package model.missle;
 
 import controller.Main;
 import model.GameFigure;
-import model.Shooter;
+import model.shooter.Shooter;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

@@ -1,12 +1,10 @@
-package model.ufo;
+package model.bird;
 
-import controller.Main;
+public class BirdAnimEntry implements BirdAnimStrategy {
 
-public class UFOAnimEntry implements UFOAnimStrategy {
+    Bird context;
 
-    UFO context;
-
-    public UFOAnimEntry(UFO context){
+    public BirdAnimEntry(Bird context){
         this.context = context;
     }
 

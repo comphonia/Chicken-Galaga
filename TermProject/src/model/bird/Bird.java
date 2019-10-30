@@ -1,4 +1,4 @@
-package model.ufo;
+package model.bird;
 
 import controller.Main;
 import controller.observer.Observer;
@@ -8,7 +8,7 @@ import model.GameFigure;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class UFO extends GameFigure implements Subject {
+public class Bird extends GameFigure implements Subject {
 
     public static int UNIT_MOVE = 5;
     public static int UNIT_MOVE_FALLING = 5;
@@ -16,6 +16,7 @@ public class UFO extends GameFigure implements Subject {
     public static final int STATE_ENTRY =3;
     public static final int STATE_FALLING =1;
     public static final int STATE_DONE =2;
+    public static int AVAILABLE_UNITS = 0;
 
     int size = 40;
     int width,height;
@@ -24,11 +25,11 @@ public class UFO extends GameFigure implements Subject {
     boolean movingToLocation = true;
     int state;
     Color color;
-    UFOAnimStrategy animStrategy;
+    BirdAnimStrategy animStrategy;
 
     ArrayList<Observer> listeners = new ArrayList<>();
 
-    public UFO(int x, int y,int a, int b){
+    public Bird(int x, int y, int a, int b){
         super(x,y);
         destinationx = a;
         destinationy = b;
@@ -36,7 +37,7 @@ public class UFO extends GameFigure implements Subject {
         height = size /2;
         state=STATE_ENTRY;
         color = Color.white;
-        animStrategy = new UFOAnimFlying(this);
+        animStrategy = new BirdAnimFlying(this);
     }
     @Override
     public void render(Graphics2D g2) {
@@ -53,16 +54,16 @@ public class UFO extends GameFigure implements Subject {
 
     private void updateState() {
         if(state == STATE_ENTRY){
-            animStrategy = new UFOAnimEntry(this);
+            animStrategy = new BirdAnimEntry(this);
             if(location.x >= destinationx && location.y >= destinationy){
                 state = STATE_FLYING;
             }
         }
         else if(state == STATE_FLYING){
-            animStrategy = new UFOAnimFlying(this);
+            animStrategy = new BirdAnimFlying(this);
             if(hitCount>0){
                 state = STATE_FALLING;
-                animStrategy = new UFOAnimFalling(this);
+                animStrategy = new BirdAnimFalling(this);
             }
         }else if(state == STATE_FALLING){
             if(location.y >= Main.win.canvas.height){

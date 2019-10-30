@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0114bd-2758-44f7-ae37-794a9438527a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/shooter/ShooterAnimFalling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/shooter/ShooterAnimIdle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/shooter/ShooterAnimStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ufo/UFO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimFlying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ufo/UFOAnimFlying.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/observer/UFOObserverAddNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/observer/UFOObserverAddNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shooter/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/missle/Missile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/missle/Missile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/missle/MissileAnimShooting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/missle/MissileAnimShooting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/Bird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/BirdAnimEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimFalling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/BirdAnimFalling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimFlying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/BirdAnimFlying.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/BirdAnimStrategy.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,16 +49,19 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="view" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\Ex5EveristusA\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject" />
       <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src" />
       <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\out\production\TermProject" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\Ex5EveristusA\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model.shooter" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -108,7 +122,7 @@
       <workItem from="1572294194182" duration="178000" />
       <workItem from="1572294395432" duration="11109000" />
       <workItem from="1572324905357" duration="13651000" />
-      <workItem from="1572407145791" duration="1354000" />
+      <workItem from="1572407145791" duration="5668000" />
     </task>
     <servers />
   </component>

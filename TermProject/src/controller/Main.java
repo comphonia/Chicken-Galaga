@@ -2,8 +2,8 @@ package controller;
 
 import controller.observer.UFOObserverAddNew;
 import model.*;
-import model.ufo.UFO;
-import view.Leaderboard;
+import model.bird.Bird;
+import model.shooter.Shooter;
 import view.MyWindow;
 
 import javax.swing.*;
@@ -32,6 +32,11 @@ public class Main {
         gameLoop();
     }
 
+    public static void endGame(){
+        Font font = new Font("Courier New",Font.BOLD,40);
+        gameData.friendObject.add(new Text("GAME OVER",100,200, Color.RED,font));
+    }
+
     static void startScreen(){
         //show initial message on canvas
        // Font font = new Font("Courier New",Font.BOLD,40);
@@ -54,21 +59,26 @@ public class Main {
         int y = Main.win.getHeight() - 100;
         gameData.fixedObject.add(new Shooter(x,y));
 
+        startWave();
+    }
+
+    private static void startWave() {
         // spawn 20 ufos
         int j = 50;
         for (int i = 0; i < 6; i++) {
-            addUFOwithListener(0,0,6 + j,50);
-            j+=100;
+            addUFOwithListener(0,0,8 + j,50);
+            j+=80;
         }
         j=50;
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 8; i++) {
             addUFOwithListener(0,0,20 + j,100);
-            j+=100;
+            j+=80;
         }
     }
 
     public static void addUFOwithListener(int x, int y,int a, int b) {
-        var ufo = new UFO(x,y,a,b);
+        var ufo = new Bird(x,y,a,b);
+        Bird.AVAILABLE_UNITS++;
         ufo.attachListener(new UFOObserverAddNew());
         gameData.enemyObject.add(ufo);
 }
@@ -91,6 +101,10 @@ public class Main {
                 if(sleepTIme > 0)Thread.sleep(sleepTIme);
             }catch (InterruptedException e){
                 e.printStackTrace();
+            }
+
+            if(Bird.AVAILABLE_UNITS <= 0){
+                startWave();
             }
         }
     }

@@ -1,11 +1,11 @@
-package model.ufo;
+package model.bird;
 
-public class UFOAnimFlying implements UFOAnimStrategy {
+public class BirdAnimFlying implements BirdAnimStrategy {
 
-    UFO context;
+    Bird context;
     int newDestination;
 
-    public UFOAnimFlying(UFO context){
+    public BirdAnimFlying(Bird context){
         this.context = context;
     }
 

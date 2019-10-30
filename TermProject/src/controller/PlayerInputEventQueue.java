@@ -2,11 +2,9 @@ package controller;
 
 import controller.observer.UFOCreateEvent;
 import model.missle.Missile;
-import model.MousePointer;
-import model.Shooter;
+import model.shooter.Shooter;
 
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
 import java.util.LinkedList;
 
 public class PlayerInputEventQueue {
