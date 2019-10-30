@@ -56,13 +56,13 @@ public class Main {
 
         // spawn 20 ufos
         int j = 50;
-        for (int i = 0; i < 10; i++) {
-            addUFOwithListener(0,0,100 + j,50);
+        for (int i = 0; i < 6; i++) {
+            addUFOwithListener(0,0,6 + j,50);
             j+=100;
         }
         j=50;
-        for (int i = 0; i < 10; i++) {
-            addUFOwithListener(0,0,100 + j,100);
+        for (int i = 0; i < 6; i++) {
+            addUFOwithListener(0,0,20 + j,100);
             j+=100;
         }
     }

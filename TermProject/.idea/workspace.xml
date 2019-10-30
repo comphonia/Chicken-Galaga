@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0114bd-2758-44f7-ae37-794a9438527a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/ufo/UFOAnimEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ufo/UFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ufo/UFO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimFlying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ufo/UFOAnimFlying.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,6 +108,7 @@
       <workItem from="1572294194182" duration="178000" />
       <workItem from="1572294395432" duration="11109000" />
       <workItem from="1572324905357" duration="13651000" />
+      <workItem from="1572407145791" duration="1354000" />
     </task>
     <servers />
   </component>

@@ -20,7 +20,7 @@ public class UFO extends GameFigure implements Subject {
     int size = 40;
     int width,height;
     int destinationx, destinationy;
-    boolean movinRight = true;
+    boolean movinUp = true;
     boolean movingToLocation = true;
     int state;
     Color color;
@@ -53,11 +53,13 @@ public class UFO extends GameFigure implements Subject {
 
     private void updateState() {
         if(state == STATE_ENTRY){
-            if(location.x == destinationx && location.y == destinationy){
+            animStrategy = new UFOAnimEntry(this);
+            if(location.x >= destinationx && location.y >= destinationy){
                 state = STATE_FLYING;
             }
         }
         else if(state == STATE_FLYING){
+            animStrategy = new UFOAnimFlying(this);
             if(hitCount>0){
                 state = STATE_FALLING;
                 animStrategy = new UFOAnimFalling(this);
