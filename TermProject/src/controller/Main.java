@@ -54,11 +54,21 @@ public class Main {
         int y = Main.win.getHeight() - 100;
         gameData.fixedObject.add(new Shooter(x,y));
 
-        addUFOwithListener(100,100);
+        // spawn 20 ufos
+        int j = 50;
+        for (int i = 0; i < 10; i++) {
+            addUFOwithListener(0,0,100 + j,50);
+            j+=100;
+        }
+        j=50;
+        for (int i = 0; i < 10; i++) {
+            addUFOwithListener(0,0,100 + j,100);
+            j+=100;
+        }
     }
 
-    public static void addUFOwithListener(int x, int y) {
-        var ufo = new UFO(x,y);
+    public static void addUFOwithListener(int x, int y,int a, int b) {
+        var ufo = new UFO(x,y,a,b);
         ufo.attachListener(new UFOObserverAddNew());
         gameData.enemyObject.add(ufo);
 }

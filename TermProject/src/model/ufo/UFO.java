@@ -13,23 +13,28 @@ public class UFO extends GameFigure implements Subject {
     public static int UNIT_MOVE = 5;
     public static int UNIT_MOVE_FALLING = 5;
     public static final int STATE_FLYING =0;
+    public static final int STATE_ENTRY =3;
     public static final int STATE_FALLING =1;
     public static final int STATE_DONE =2;
 
     int size = 40;
     int width,height;
+    int destinationx, destinationy;
     boolean movinRight = true;
+    boolean movingToLocation = true;
     int state;
     Color color;
     UFOAnimStrategy animStrategy;
 
     ArrayList<Observer> listeners = new ArrayList<>();
 
-    public UFO(int x, int y){
+    public UFO(int x, int y,int a, int b){
         super(x,y);
+        destinationx = a;
+        destinationy = b;
         width = size;
         height = size /2;
-        state=STATE_FLYING;
+        state=STATE_ENTRY;
         color = Color.white;
         animStrategy = new UFOAnimFlying(this);
     }
@@ -47,7 +52,12 @@ public class UFO extends GameFigure implements Subject {
     }
 
     private void updateState() {
-        if(state == STATE_FLYING){
+        if(state == STATE_ENTRY){
+            if(location.x == destinationx && location.y == destinationy){
+                state = STATE_FLYING;
+            }
+        }
+        else if(state == STATE_FLYING){
             if(hitCount>0){
                 state = STATE_FALLING;
                 animStrategy = new UFOAnimFalling(this);

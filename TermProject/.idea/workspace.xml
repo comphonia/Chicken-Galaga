@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0114bd-2758-44f7-ae37-794a9438527a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/view/Leaderboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ufo/UFOAnimEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameFigure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/missle/Missile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/missle/Missile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ufo/UFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ufo/UFO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MyCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MyWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyWindow.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

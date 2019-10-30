@@ -50,7 +50,7 @@ public class PlayerInputEventQueue {
                     break;
                     case InputEvent.UFO_CREATE:
                         UFOCreateEvent ue = (UFOCreateEvent) inputEvent.event;
-                        Main.addUFOwithListener(ue.getX(),ue.getY());
+                      //  Main.addUFOwithListener(ue.getX(),ue.getY());
             }
         }
     }
