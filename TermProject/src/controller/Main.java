@@ -1,13 +1,15 @@
 package controller;
 
-import controller.observer.UFOObserverAddNew;
+import controller.observer.BirdObserverAddNew;
 import model.*;
 import model.bird.Bird;
+import model.dropping.Dropping;
 import model.shooter.Shooter;
 import view.MyWindow;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 
@@ -15,9 +17,9 @@ public class Main {
     public static GameData gameData;
     public static  PlayerInputEventQueue playerInputEventQueue;
     public static boolean running = false;
-
     public static int INDEX_MOUSE_POINTER = 0; // in gameData.fixedObject
     public static int INDEX_SHOOTER = 1;
+    public static int playedTime = 0;
 
     public static int FPS = 30; // frames per second
 
@@ -55,10 +57,7 @@ public class Main {
     static void initGame(){
         gameData.clear();
       //  gameData.fixedObject.add(new MousePointer(0,0));
-        int x = Main.win.getWidth() / 2;
-        int y = Main.win.getHeight() - 100;
-        gameData.fixedObject.add(new Shooter(x,y));
-
+        SpawnShooter();
         startWave();
     }
 
@@ -66,21 +65,23 @@ public class Main {
         // spawn 20 ufos
         int j = 50;
         for (int i = 0; i < 6; i++) {
-            addUFOwithListener(0,0,8 + j,50);
+            addBirdWithListener(0,0,8 + j,50);
             j+=80;
         }
         j=50;
         for (int i = 0; i < 8; i++) {
-            addUFOwithListener(0,0,20 + j,100);
+            addBirdWithListener(0,0,20 + j,100);
             j+=80;
         }
     }
 
-    public static void addUFOwithListener(int x, int y,int a, int b) {
-        var ufo = new Bird(x,y,a,b);
+    public static void addBirdWithListener(int x, int y, int a, int b) {
+        var bird = new Bird(x,y,a,b);
+        var dropping = new Dropping(a,b);
+        gameData.enemyObject.add(dropping);
         Bird.AVAILABLE_UNITS++;
-        ufo.attachListener(new UFOObserverAddNew());
-        gameData.enemyObject.add(ufo);
+        bird.attachListener(new BirdObserverAddNew());
+        gameData.enemyObject.add(bird);
 }
 
     private static void gameLoop() {
@@ -88,6 +89,8 @@ public class Main {
         // game loop
         while (running) {
             long startTime = System.currentTimeMillis();
+            playedTime++;
+            updatePlayedTimeLabel();
 
             playerInputEventQueue.processInputEvents();
             processCollisions();
@@ -109,6 +112,7 @@ public class Main {
         }
     }
 
+
     private static void processCollisions() {
         var shooter = (Shooter)Main.gameData.fixedObject.get(0);
         for(var enemy: Main.gameData.enemyObject){
@@ -121,6 +125,7 @@ public class Main {
             for(var enemy: Main.gameData.enemyObject){
                 if(friend.collideWith(enemy)){
                     ++friend.hitCount;
+                    if(friend.hitCount == 1)
                     ++enemy.hitCount;
                 }
             }
@@ -134,6 +139,23 @@ public class Main {
         win.setVisible(true);
     }
 
+    public static void updateScoreLabel(int playerScore) {
+        Shooter.updateScore(playerScore);
+        MyWindow.updateScoreLabel(Shooter.getPlayerScore());
+    }
+    private static void updatePlayedTimeLabel() {
+        MyWindow.updatePlayedTimeLabel(playedTime);
+    }
+    public static void updatePlayerLifeLabel() {
+        MyWindow.updatePlayerLifeLabel(Shooter.PLAYER_LIVES);
+    }
+    public static void SpawnShooter(){
+        if(Main.gameData.fixedObject.size() > 0)
+         Main.gameData.fixedObject.remove(0);
+        int x = Main.win.getWidth() / 2;
+        int y = Main.win.getHeight() - 100;
+        gameData.fixedObject.add(new Shooter(x,y));
+    }
 }
 
 

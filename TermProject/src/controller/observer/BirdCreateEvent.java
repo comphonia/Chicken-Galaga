@@ -2,7 +2,7 @@ package controller.observer;
 
 import java.util.EventObject;
 
-public class UFOCreateEvent extends EventObject {
+public class BirdCreateEvent extends EventObject {
     private int x;
     private int y;
     /**
@@ -11,7 +11,7 @@ public class UFOCreateEvent extends EventObject {
      * @param source the object on which the Event initially occurred
      * @throws IllegalArgumentException if source is null
      */
-    public UFOCreateEvent(Object source, int x, int y) {
+    public BirdCreateEvent(Object source, int x, int y) {
         super(source);
         this.x = x;
         this.y=y;

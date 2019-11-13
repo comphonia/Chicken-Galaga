@@ -33,7 +33,7 @@ public class MyCanvas extends JPanel {
         }
 
         // initialize the image buffer
-        g2Offscreen.setBackground((Color.black));
+        g2Offscreen.setBackground((Color.BLACK));
         g2Offscreen.clearRect(0, 0, width, height);
 
         // render all game data here

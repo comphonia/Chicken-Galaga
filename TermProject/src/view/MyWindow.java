@@ -17,6 +17,12 @@ public class MyWindow extends JFrame {
     public static Leaderboard leaderboard;
     public JButton leaderboardButton;
     public JButton quitButton;
+    static JLabel scoreLabel = new JLabel("Score:"+0);
+    static JLabel playTimeLabel = new JLabel("Time:"+0);
+    static JLabel playerLifeLabel = new JLabel("Lives:"+3);
+
+
+
 
     public void init() {
         setSize(700, 500);
@@ -68,14 +74,33 @@ public class MyWindow extends JFrame {
         startPanel.add(leaderboardButton);
         startPanel.add(quitButton);
 
+
         // canvas.setLayout(new GridLayout(2,1));
         fixedPanel.add(startPanel);
         canvas.setLayout(new GridLayout(2, 1, 0, 5));
         canvas.add(logo);
         canvas.add(fixedPanel);
 
+        JPanel infoPanel = new JPanel();
+        infoPanel.setPreferredSize(new Dimension(100, 30));
+        infoPanel.setBackground(Color.BLACK);
+        infoPanel.setLayout(new GridLayout(1, 3, 5, 0));
+        infoPanel.setAlignmentX(500);
+
+        infoPanel.add(playerLifeLabel);
+        infoPanel.add(playTimeLabel);
+        infoPanel.add(scoreLabel);
+        scoreLabel.setHorizontalAlignment(JLabel.CENTER);
+        scoreLabel.setFont(new Font("Verdana", Font.PLAIN, 20));
+        scoreLabel.setForeground(Color.GREEN);
+        playTimeLabel.setHorizontalAlignment(JLabel.CENTER);
+        playTimeLabel.setFont(new Font("Verdana", Font.PLAIN, 20));
+        playTimeLabel.setForeground(Color.ORANGE);
+        playerLifeLabel.setHorizontalAlignment(JLabel.CENTER);
+        playerLifeLabel.setFont(new Font("Verdana", Font.PLAIN, 20));
+        playerLifeLabel.setForeground(Color.CYAN);
+
         cp.add(BorderLayout.CENTER, canvas);
-        //cp.add(BorderLayout.SOUTH, startPanel);
 
         // anonymous class, lambda
         startButton.addActionListener(e -> {
@@ -83,6 +108,7 @@ public class MyWindow extends JFrame {
                 Main.running = true;
                 canvas.remove(fixedPanel);
                 canvas.remove(logo);
+                cp.add(BorderLayout.NORTH, infoPanel);
             }
         });
         quitButton.addActionListener(e -> {
@@ -100,5 +126,11 @@ public class MyWindow extends JFrame {
         leaderboard.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         leaderboard.setVisible(true);
     }
+
+    public static void updateScoreLabel(int score){
+       scoreLabel.setText("Score:"+ score);
+    }
+    public static void updatePlayedTimeLabel(int playedTime) {playTimeLabel.setText("Time:"+ playedTime); }
+    public static void updatePlayerLifeLabel(int playerLifeCount) {playerLifeLabel.setText("Lives:"+playerLifeCount);}
 
 }

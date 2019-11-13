@@ -1,4 +1,4 @@
-package model.missle;
+package model.dropping;
 
 import controller.Main;
 import model.GameFigure;
@@ -7,30 +7,30 @@ import model.shooter.Shooter;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class Missile extends GameFigure {
+public class Dropping extends GameFigure {
 
     public static final int UNIT_MOVE = 5;
     public static final int INIT_MISSILE_SIZE = 5;
-    public static final int MAX_MISSILE_SIZE = 30;
+    public static final int MAX_DROPPING_SIZE = 30;
 
-    public static final int STATE_SHOOTING = 0;
-    public static final int STATE_EXPLODING = 1;
-    public static final int STATE_DONE = 2;
+    public static final int STATE_COOKING = 0;
+    public static final int STATE_DROPPING = 1;
+    public static final int STATE_EXPLODING = 2;
+    public static final int STATE_DONE = 3;
 
     int size = INIT_MISSILE_SIZE;
     Point2D.Float target; // where mouse was pressed
-    Color color;
-    public static int state;
-    MissileAnimStrategy animStrategy;
+    public Color color;
+    public int state;
+    DroppingAnimStrategy animStrategy;
 
-    public Missile(int tx, int ty) {
-        Shooter shooter = (Shooter) Main.gameData.fixedObject.get(0);
-        super.location.x = shooter.barrel.x2;
-        super.location.y = shooter.barrel.y2;
-        target = new Point2D.Float(shooter.base.x, -90);
-        color = Color.RED;
-        state =STATE_SHOOTING;
-        animStrategy = new MissileAnimShooting(this);
+    public Dropping(int tx, int ty) {
+        super.location.x = tx;
+        super.location.y = ty;
+        target = new Point2D.Float(tx, 90);
+        color = new Color(0f, 0f, 0f, 0f);
+        state = STATE_COOKING;
+        animStrategy = new DroppingAnimShooting(this);
     }
 
     @Override
@@ -47,13 +47,16 @@ public class Missile extends GameFigure {
     }
 
     private void updateState() {
-        if(state==STATE_SHOOTING) {
-            if (hitCount>0 || target.distance(location) <= 3.0) {
+        if(state == STATE_COOKING){
+
+        }
+        else if(state== STATE_DROPPING) {
+            if (hitCount>0 || target.distance(location) >= Main.win.canvas.height) {
                 state = STATE_EXPLODING;
-                animStrategy = new MissileAnimExploding(this);
+                animStrategy = new DroppingAnimExploding(this);
             }
         }else if(state ==STATE_EXPLODING){
-                if(size >= MAX_MISSILE_SIZE){
+                if(size >= MAX_DROPPING_SIZE){
                     state=STATE_DONE;
                 }
             }else if(state == STATE_DONE){

@@ -52,6 +52,7 @@ public class Bird extends GameFigure implements Subject {
         animStrategy.animate();
     }
 
+    private boolean firstHit, secondHit;
     private void updateState() {
         if(state == STATE_ENTRY){
             animStrategy = new BirdAnimEntry(this);
@@ -61,7 +62,17 @@ public class Bird extends GameFigure implements Subject {
         }
         else if(state == STATE_FLYING){
             animStrategy = new BirdAnimFlying(this);
-            if(hitCount>0){
+            if(hitCount>0) {
+                if(!firstHit) {
+                    Main.updateScoreLabel(5);
+                    firstHit = true;
+                }
+            }
+            if(hitCount>1){
+                if(!secondHit) {
+                    Main.updateScoreLabel(10);
+                    secondHit = true;
+                }
                 state = STATE_FALLING;
                 animStrategy = new BirdAnimFalling(this);
             }

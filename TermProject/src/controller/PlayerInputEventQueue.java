@@ -1,6 +1,6 @@
 package controller;
 
-import controller.observer.UFOCreateEvent;
+import controller.observer.BirdCreateEvent;
 import model.missle.Missile;
 import model.shooter.Shooter;
 
@@ -47,7 +47,7 @@ public class PlayerInputEventQueue {
                     }
                     break;
                     case InputEvent.UFO_CREATE:
-                        UFOCreateEvent ue = (UFOCreateEvent) inputEvent.event;
+                        BirdCreateEvent ue = (BirdCreateEvent) inputEvent.event;
                       //  Main.addUFOwithListener(ue.getX(),ue.getY());
             }
         }

@@ -2,27 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0114bd-2758-44f7-ae37-794a9438527a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/shooter/ShooterAnimFalling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/shooter/ShooterAnimIdle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/shooter/ShooterAnimStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sprint2_Presentation.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dropping/Dropping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dropping/DroppingAnimExploding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dropping/DroppingAnimShooting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dropping/DroppingAnimStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EveristusA_ProductSprintBacklog.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../EveristusA_ProductSprintBacklog.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlayerInputEventQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/observer/UFOObserverAddNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/observer/UFOObserverAddNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shooter/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/observer/UFOCreateEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/observer/BirdCreateEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/observer/UFOObserverAddNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/observer/BirdObserverAddNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/bird/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/Bird.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/missle/Missile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/missle/Missile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/missle/MissileAnimShooting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/missle/MissileAnimShooting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/Bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/BirdAnimEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimFalling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/BirdAnimFalling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimFlying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/BirdAnimFlying.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ufo/UFOAnimStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/BirdAnimStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/shooter/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shooter/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/shooter/ShooterAnimFalling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shooter/ShooterAnimFalling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Leaderboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Leaderboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MyCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MyWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyWindow.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,24 +61,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/model/dropping" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/src/model" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject" />
-      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src" />
-      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\out\production\TermProject" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="view" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src\model\dropping" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src\model" />
       <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\Ex5EveristusA\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="model.shooter" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="view" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\out\production\TermProject" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -122,7 +142,8 @@
       <workItem from="1572294194182" duration="178000" />
       <workItem from="1572294395432" duration="11109000" />
       <workItem from="1572324905357" duration="13651000" />
-      <workItem from="1572407145791" duration="5668000" />
+      <workItem from="1572407145791" duration="9061000" />
+      <workItem from="1573540441551" duration="18031000" />
     </task>
     <servers />
   </component>
