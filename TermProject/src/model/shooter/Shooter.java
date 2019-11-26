@@ -16,7 +16,8 @@ public class Shooter extends GameFigure {
     public static final int BARREL_LEN = 20;
     public static final int UNIT_MOVE = 10; // 10 pixels by 4 arrow keys
     public static int PLAYER_LIVES = 3;
-    int state;
+    private int lifetime = 0;
+    private int state;
     public Rectangle2D.Float base;
     public Line2D.Float barrel;
     Color color;
@@ -44,6 +45,12 @@ public class Shooter extends GameFigure {
 
     @Override
     public void update() {
+        lifetime++;
+        if(lifetime <= 200){
+            addShield();
+        }else{
+            removeShield();
+        }
         double rad = Math.cos(180);
         float barrel_y = -90;
         float barrel_x = (float) (BARREL_LEN * Math.cos(rad));
@@ -71,6 +78,19 @@ public class Shooter extends GameFigure {
         if(Shooter.PLAYER_LIVES <= 0)
             Main.endGame();
 
+    }
+
+    private void addShield(){
+        color = Color.GREEN;
+        hitCount = -9999;
+    }
+    private boolean removeFlag = false;
+    private void removeShield(){
+        if(!removeFlag) {
+            color = Color.cyan;
+            hitCount = 0;
+            removeFlag = true;
+        }
     }
 
     public static void updateScore(int score){

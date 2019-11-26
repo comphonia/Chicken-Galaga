@@ -149,6 +149,7 @@ public class Main {
     public static void updatePlayerLifeLabel() {
         MyWindow.updatePlayerLifeLabel(Shooter.PLAYER_LIVES);
     }
+
     public static void SpawnShooter(){
         if(Main.gameData.fixedObject.size() > 0)
          Main.gameData.fixedObject.remove(0);
