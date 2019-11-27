@@ -16,7 +16,7 @@ public class ShooterAnimFalling implements ShooterAnimStrategy {
         context.color = Color.RED;
         context.location.y += context.UNIT_MOVE_FALLING;
         if (context.location.y >= Main.win.canvas.height + 150) {
-            Main.SpawnShooter();
+            Main.spawnShooter();
             if (Shooter.PLAYER_LIVES <= 0)
                 Main.running = false;
         }

@@ -16,7 +16,8 @@ public class Shooter extends GameFigure {
     public static final int BARREL_LEN = 20;
     public static final int UNIT_MOVE = 10; // 10 pixels by 4 arrow keys
     public static int PLAYER_LIVES = 3;
-    private int lifetime = 0;
+    private int effectLifetime = 0;
+    private String effect = "";
     private int state;
     public Rectangle2D.Float base;
     public Line2D.Float barrel;
@@ -31,6 +32,7 @@ public class Shooter extends GameFigure {
         barrel = new Line2D.Float(x, y, x, y - BARREL_LEN);
         color = Color.cyan;
         state = STATE_ALIVE;
+        effect = "shield";
         animStrategy = new ShooterAnimIdle(this);
     }
 
@@ -38,18 +40,18 @@ public class Shooter extends GameFigure {
     public void render(Graphics2D g2) {
         g2.setColor(color);
         g2.setStroke(new BasicStroke(7)); //thickness of the line
-       // g2.fill(base);
+        // g2.fill(base);
         g2.draw(barrel);
         g2.draw(base);
     }
 
     @Override
     public void update() {
-        lifetime++;
-        if(lifetime <= 200){
-            addShield();
-        }else{
-            removeShield();
+        effectLifetime++;
+        if (effectLifetime <= 100) {
+            doEffect(effect);
+        } else {
+            removeEffect();
         }
         double rad = Math.cos(180);
         float barrel_y = -90;
@@ -75,29 +77,49 @@ public class Shooter extends GameFigure {
         } else if (state == STATE_FALLING) {
             animStrategy = new ShooterAnimFalling(this);
         }
-        if(Shooter.PLAYER_LIVES <= 0)
+        if (Shooter.PLAYER_LIVES <= 0)
             Main.endGame();
 
     }
-
-    private void addShield(){
-        color = Color.GREEN;
-        hitCount = -9999;
-    }
     private boolean removeFlag = false;
-    private void removeShield(){
-        if(!removeFlag) {
-            color = Color.cyan;
-            hitCount = 0;
+
+    public void doEffect(String effect) {
+        if(!removeFlag && !effect.isEmpty()) {
             removeFlag = true;
+            this.effect = effect;
+            effectLifetime = 0;
+            if (effect.equals("shield")) {
+                addShield();
+            } else if (effect.equals("life")) {
+                addLife();
+            }
         }
     }
 
-    public static void updateScore(int score){
+
+    private void removeEffect() {
+        if (removeFlag) {
+            removeFlag = false;
+            color = Color.cyan;
+            hitCount = 0;
+            this.effect = "";
+        }
+    }
+
+    private void addShield() {
+        color = Color.YELLOW;
+        hitCount = -9999;
+    }
+    private void addLife() {
+        Shooter.PLAYER_LIVES++;
+        Main.updatePlayerLifeLabel();
+    }
+
+    public static void updateScore(int score) {
         playerScore += score;
     }
 
-    public static int getPlayerScore(){
+    public static int getPlayerScore() {
         return playerScore;
     }
 

@@ -1,4 +1,4 @@
-package model.bird;
+package model.asteroid;
 
 import controller.Main;
 import controller.observer.Observer;
@@ -8,7 +8,7 @@ import model.GameFigure;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class Bird extends GameFigure implements Subject {
+public class Asteroid extends GameFigure implements Subject {
 
     public static int UNIT_MOVE = 5;
     public static int UNIT_MOVE_FALLING = 5;
@@ -21,23 +21,23 @@ public class Bird extends GameFigure implements Subject {
     int size = 40;
     int width,height;
     int destinationx, destinationy;
-    boolean movinUp = true;
+    boolean movingRight = true;
     boolean movingToLocation = true;
     int state;
     Color color;
-    BirdAnimStrategy animStrategy;
+    AsteroidAnimStrategy animStrategy;
 
     ArrayList<Observer> listeners = new ArrayList<>();
 
-    public Bird(int x, int y, int a, int b){
+    public Asteroid(int x, int y, int a, int b,int size){
         super(x,y);
         destinationx = a;
         destinationy = b;
         width = size;
-        height = size /2;
+        height = size;
         state=STATE_ENTRY;
-        color = Color.white;
-        animStrategy = new BirdAnimFlying(this);
+        color = Color.GRAY;
+        animStrategy = new AsteroidAnimFlying(this);
     }
     @Override
     public void render(Graphics2D g2) {
@@ -55,20 +55,26 @@ public class Bird extends GameFigure implements Subject {
     private boolean firstHit, secondHit;
     private void updateState() {
         if(state == STATE_ENTRY){
-            animStrategy = new BirdAnimEntry(this);
+            animStrategy = new AsteroidAnimEntry(this);
             if(location.x >= destinationx && location.y >= destinationy){
                 state = STATE_FLYING;
             }
         }
         else if(state == STATE_FLYING){
-            animStrategy = new BirdAnimFlying(this);
+            animStrategy = new AsteroidAnimFlying(this);
             if(hitCount>0) {
                 if(!firstHit) {
                     Main.updateScoreLabel(5);
                     firstHit = true;
                 }
+            }
+            if(hitCount>1){
+                if(!secondHit) {
+                    Main.updateScoreLabel(5);
+                    secondHit = true;
+                }
                 state = STATE_FALLING;
-                animStrategy = new BirdAnimFalling(this);
+                animStrategy = new AsteroidAnimFalling(this);
             }
         }else if(state == STATE_FALLING){
             if(location.y >= Main.win.canvas.height){

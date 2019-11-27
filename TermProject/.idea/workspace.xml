@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0114bd-2758-44f7-ae37-794a9438527a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../TermProject.zip" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/asteroid/Asteroid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/asteroid/AsteroidAnimEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/asteroid/AsteroidAnimFalling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/asteroid/AsteroidAnimFlying.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/asteroid/AsteroidAnimStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/poweup/Powerup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/poweup/PowerupAnimFalling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/poweup/PowerupAnimStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/bird/BirdAnimFlying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/BirdAnimFlying.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/bird/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/Bird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dropping/Dropping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dropping/Dropping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dropping/DroppingAnimShooting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dropping/DroppingAnimDrop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/shooter/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shooter/Shooter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/shooter/ShooterAnimFalling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shooter/ShooterAnimFalling.java" afterDir="false" />
     </list>
@@ -49,27 +58,29 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/model/dropping" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/model/bird" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/src/model" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="view" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\out\production\TermProject" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src\model\dropping" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src\model\bird" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src" />
       <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src\model" />
+      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src\model\dropping" />
       <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\Ex5EveristusA\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="model.shooter" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject" />
-      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\src" />
-      <recent name="D:\Users\Everistus\Documents\_OnlineClasses\OOSW\TermProject\TermProject\out\production\TermProject" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -133,6 +144,8 @@
       <workItem from="1572407145791" duration="9061000" />
       <workItem from="1573540441551" duration="18031000" />
       <workItem from="1574759356682" duration="3563000" />
+      <workItem from="1574821185404" duration="324000" />
+      <workItem from="1574822474362" duration="19316000" />
     </task>
     <servers />
   </component>

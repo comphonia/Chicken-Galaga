@@ -4,11 +4,11 @@ import controller.Main;
 
 import java.awt.*;
 
-public class DroppingAnimShooting implements DroppingAnimStrategy {
+public class DroppingAnimDrop implements DroppingAnimStrategy {
     Dropping context;
     private int tempTime=0;
     private float saveX, saveY;
-    public DroppingAnimShooting(Dropping context){
+    public DroppingAnimDrop(Dropping context){
         this.context = context;
         saveX = context.location.x;
         saveY = context.location.y;

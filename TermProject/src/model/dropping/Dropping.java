@@ -2,7 +2,6 @@ package model.dropping;
 
 import controller.Main;
 import model.GameFigure;
-import model.shooter.Shooter;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -30,7 +29,7 @@ public class Dropping extends GameFigure {
         target = new Point2D.Float(tx, 90);
         color = new Color(0f, 0f, 0f, 0f);
         state = STATE_COOKING;
-        animStrategy = new DroppingAnimShooting(this);
+        animStrategy = new DroppingAnimDrop(this);
     }
 
     @Override
