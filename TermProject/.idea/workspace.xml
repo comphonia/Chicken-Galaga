@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0114bd-2758-44f7-ae37-794a9438527a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/asteroid/Asteroid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/asteroid/AsteroidAnimEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/asteroid/AsteroidAnimFalling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/asteroid/AsteroidAnimFlying.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/asteroid/AsteroidAnimStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/poweup/Powerup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/poweup/PowerupAnimFalling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/poweup/PowerupAnimStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/state/ShooterAliveState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/state/ShooterFallingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/state/ShooterLifeState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/asteroid/Asteroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/asteroid/Asteroid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/bird/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/bird/Bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dropping/Dropping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dropping/Dropping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dropping/DroppingAnimShooting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dropping/DroppingAnimDrop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/missle/Missile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/missle/Missile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/shooter/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shooter/Shooter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/shooter/ShooterAnimFalling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shooter/ShooterAnimFalling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Leaderboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Leaderboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MyWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyWindow.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,6 +143,7 @@
       <workItem from="1574759356682" duration="3563000" />
       <workItem from="1574821185404" duration="324000" />
       <workItem from="1574822474362" duration="19316000" />
+      <workItem from="1575441402477" duration="21847000" />
     </task>
     <servers />
   </component>

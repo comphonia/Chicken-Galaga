@@ -52,7 +52,7 @@ public class Bird extends GameFigure implements Subject {
         animStrategy.animate();
     }
 
-    private boolean firstHit, secondHit;
+    private boolean firstHit;
     private void updateState() {
         if(state == STATE_ENTRY){
             animStrategy = new BirdAnimEntry(this);

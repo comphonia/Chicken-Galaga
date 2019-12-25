@@ -19,6 +19,7 @@ public class Asteroid extends GameFigure implements Subject {
     public static int AVAILABLE_UNITS = 0;
 
     int size = 40;
+    int smallSize = 20;
     int width,height;
     int destinationx, destinationy;
     boolean movingRight = true;
@@ -67,10 +68,14 @@ public class Asteroid extends GameFigure implements Subject {
                     Main.updateScoreLabel(5);
                     firstHit = true;
                 }
+                if(width > smallSize || height > smallSize){
+                    width-=smallSize;
+                    height-=smallSize;
+                }
             }
             if(hitCount>1){
                 if(!secondHit) {
-                    Main.updateScoreLabel(5);
+                    Main.updateScoreLabel(10);
                     secondHit = true;
                 }
                 state = STATE_FALLING;

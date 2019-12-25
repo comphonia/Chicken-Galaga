@@ -16,7 +16,9 @@ public class MyWindow extends JFrame {
     public JButton startButton;
     public static Leaderboard leaderboard;
     public JButton leaderboardButton;
+    public JButton inGameLeaderboardButton = new JButton("leaderboard");
     public JButton quitButton;
+    public JButton inGameQuitButton = new JButton("quit");
     static JLabel scoreLabel = new JLabel("Score:"+0);
     static JLabel playTimeLabel = new JLabel("Time:"+0);
     static JLabel playerLifeLabel = new JLabel("Lives:"+3);
@@ -55,6 +57,8 @@ public class MyWindow extends JFrame {
         leaderboardButton = new JButton("LEADERBOARD");
         leaderboardButton.setPreferredSize(new Dimension(130, 30));
         leaderboardButton.setFocusable(false);
+
+        inGameLeaderboardButton.setVisible(false);
 
         quitButton = new JButton("QUIT");
         quitButton.setPreferredSize(new Dimension(130, 30));
@@ -105,16 +109,26 @@ public class MyWindow extends JFrame {
         // anonymous class, lambda
         startButton.addActionListener(e -> {
             if (!Main.running) {
-                Main.running = true;
                 canvas.remove(fixedPanel);
                 canvas.remove(logo);
                 cp.add(BorderLayout.NORTH, infoPanel);
+                JPanel buttonPanel = new JPanel();
+                buttonPanel.add(inGameQuitButton);
+                buttonPanel.add(inGameLeaderboardButton);
+                cp.add(BorderLayout.SOUTH, buttonPanel);
+                Main.running = true;
             }
         });
         quitButton.addActionListener(e -> {
             System.exit(0);
         });
+        inGameQuitButton.addActionListener(e -> {
+            System.exit(0);
+        });
         leaderboardButton.addActionListener(e -> {
+            openLeaderboard();
+        });
+        inGameLeaderboardButton.addActionListener(e -> {
             openLeaderboard();
         });
 
@@ -133,4 +147,7 @@ public class MyWindow extends JFrame {
     public static void updatePlayedTimeLabel(int playedTime) {playTimeLabel.setText("Time:"+ playedTime); }
     public static void updatePlayerLifeLabel(int playerLifeCount) {playerLifeLabel.setText("Lives:"+playerLifeCount);}
 
+    public void showLeaderboardButton() {
+        inGameLeaderboardButton.setVisible(true);
+    }
 }

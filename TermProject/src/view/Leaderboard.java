@@ -22,16 +22,12 @@ public class Leaderboard extends JFrame {
         canvas = new MyCanvas();
         var cp = getContentPane();
         // Data to be displayed in the JTable
-        String[][] data = {
-                { "1", "5500", "1599" },
-                { "2", "146987", "200" }
-        };
 
         // Column Names
         String[] columnNames = { "Rank", "Time", "Score" };
 
         // Initializing the JTable
-        table = new JTable(data, columnNames);
+        table = new JTable(Main.leaderboardData, columnNames);
         table.setOpaque(false);
         table.setRowHeight(40);
         table.setRowMargin(4);

@@ -1,6 +1,9 @@
 package model.shooter;
 
 import controller.Main;
+import controller.state.ShooterAliveState;
+import controller.state.ShooterFallingState;
+import controller.state.ShooterLifeState;
 import model.GameFigure;
 
 import java.awt.*;
@@ -18,20 +21,20 @@ public class Shooter extends GameFigure {
     public static int PLAYER_LIVES = 3;
     private int effectLifetime = 0;
     private String effect = "";
-    private int state;
+    public ShooterLifeState state;
     public Rectangle2D.Float base;
     public Line2D.Float barrel;
     Color color;
-    ShooterAnimStrategy animStrategy;
+    private ShooterAnimStrategy animStrategy;
 
     private static int playerScore = 0;
 
     public Shooter(int x, int y) {
-        super(x, y);
+        super(x, y - 17);
         base = new Rectangle2D.Float(x - BASE_SIZE / 2, y - BASE_SIZE / 2, BASE_SIZE, BASE_SIZE);
         barrel = new Line2D.Float(x, y, x, y - BARREL_LEN);
         color = Color.cyan;
-        state = STATE_ALIVE;
+        state = new ShooterAliveState();
         effect = "shield";
         animStrategy = new ShooterAnimIdle(this);
     }
@@ -70,21 +73,31 @@ public class Shooter extends GameFigure {
     }
 
     private void updateState() {
-        if (hitCount > 0 && state == STATE_ALIVE) {
-            state = STATE_FALLING;
-            Shooter.PLAYER_LIVES--;
-            Main.updatePlayerLifeLabel();
-        } else if (state == STATE_FALLING) {
+        if (hitCount > 0 && getState() == STATE_ALIVE) {
+            state.doState(this);
+            setState(new ShooterFallingState());
+        } else if (getState() == STATE_FALLING) {
+            state.doState(this);
             animStrategy = new ShooterAnimFalling(this);
         }
         if (Shooter.PLAYER_LIVES <= 0)
             Main.endGame();
-
     }
+
+    public void setState(ShooterLifeState state) {
+        this.state = state;
+    }
+
+    private int getState() {
+        if (state instanceof ShooterAliveState)
+            return STATE_ALIVE;
+        return STATE_FALLING;
+    }
+
     private boolean removeFlag = false;
 
     public void doEffect(String effect) {
-        if(!removeFlag && !effect.isEmpty()) {
+        if (!removeFlag && !effect.isEmpty()) {
             removeFlag = true;
             this.effect = effect;
             effectLifetime = 0;
@@ -110,6 +123,7 @@ public class Shooter extends GameFigure {
         color = Color.YELLOW;
         hitCount = -9999;
     }
+
     private void addLife() {
         Shooter.PLAYER_LIVES++;
         Main.updatePlayerLifeLabel();
@@ -125,6 +139,6 @@ public class Shooter extends GameFigure {
 
     @Override
     public int getCollisionRadius() {
-        return 0;
+        return (int) (20 / 2 * 0.75);
     }
 }

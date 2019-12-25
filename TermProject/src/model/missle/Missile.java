@@ -48,7 +48,7 @@ public class Missile extends GameFigure {
 
     private void updateState() {
         if(state==STATE_SHOOTING) {
-            if (hitCount>0 || target.distance(location) <= 3.0) {
+            if (hitCount>0 || target.distance(location) <= 1.0) {
                 state = STATE_EXPLODING;
                 animStrategy = new MissileAnimExploding(this);
             }
